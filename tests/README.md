@@ -1,3 +1,6 @@
+# Bugs
+As of **Monero 'Fluorine Fermi' (v0.18.1.0-e52cb4830)**, compiling tests only work for the release build of Monero and not the debug build.
+
 # Running all tests
 
 To run all tests, run:
@@ -19,7 +22,12 @@ To run only Monero's core tests (after building):
 
 ```bash
 cd build/debug/tests/core_tests
-ctest
+ctest -V
+
+or
+
+cd build/release/tests/core_tests
+ctest -V
 ```
 
 To run the same tests on a release build, replace `debug` with `release`.
@@ -38,7 +46,12 @@ To run only Monero's crypto tests (after building):
 
 ```bash
 cd build/debug/tests/crypto
-ctest
+ctest -V
+
+or
+
+cd build/release/tests/crypto
+ctest -V
 ```
 
 To run the same tests on a release build, replace `debug` with `release`.
@@ -103,7 +116,12 @@ To run only Monero's hash tests (after building):
 
 ```bash
 cd build/debug/tests/hash
-ctest
+ctest -V
+
+or
+
+cd build/release/tests/hash
+ctest -V
 ```
 
 To run the same tests on a release build, replace `debug` with `release`.
@@ -124,12 +142,17 @@ To run only Monero's performance tests (after building):
 
 ```bash
 cd build/debug/tests/performance_tests
+
+or
+
+cd build/release/tests/performance_tests
+
 ./performance_tests
 ```
 
 The path may be build/Linux/master/debug (adapt as necessary for your platform).
 
-If the `performance_tests` binary does not exist, try running `make` in the `build/debug/tests/performance_tests` directory.
+If the `performance_tests` binary does not exist, try running `make` in `build/debug/tests/performance_tests` or `build/release/tests/performance_tests` directory.
 
 To run the same tests on a release build, replace `debug` with `release`.
 
@@ -141,7 +164,11 @@ To run only Monero's unit tests (after building):
 
 ```bash
 cd build/debug/tests/unit_tests
-ctest
+
+or
+
+cd build/release/tests/unit_tests
+ctest -V
 ```
 
 To run the same tests on a release build, replace `debug` with `release`.
