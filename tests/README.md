@@ -1,5 +1,6 @@
 # Bugs
-As of **Monero 'Fluorine Fermi' (v0.18.1.0-e52cb4830)**, compiling tests only work for the release build of Monero and not the debug build.
+As of **Monero 'Fluorine Fermi' (v0.18.1.0-e52cb4830)**, compiling tests only work for the release build of Monero and not the debug build by default.
+
 
 # Running all tests
 
